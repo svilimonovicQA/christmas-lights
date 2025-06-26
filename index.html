@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Christmas Lights App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>🎄 Christmas Lights 🎄</h1>
+        <p>Create a mesmerizing light display for the holidays!</p>
+      </header>
+
+      <main>
+        <div class="canvas-container">
+          <canvas id="lightsCanvas" width="800" height="600"></canvas>
+        </div>
+
+        <div class="controls">
+          <div class="control-group">
+            <h3>Animation Controls</h3>
+            <div class="control-row">
+              <button id="toggleBtn" class="primary-btn">Start Lights</button>
+              <button id="resetBtn" class="secondary-btn">Reset</button>
+            </div>
+          </div>
+
+          <div class="control-group">
+            <h3>Speed & Timing</h3>
+            <div class="control-row">
+              <label for="speedSlider">Animation Speed:</label>
+              <input
+                type="range"
+                id="speedSlider"
+                min="50"
+                max="2000"
+                value="500"
+                step="50"
+              />
+              <span id="speedValue">500ms</span>
+            </div>
+          </div>
+
+          <div class="control-group">
+            <h3>Light Properties</h3>
+            <div class="control-row">
+              <label for="colorPicker">Light Color:</label>
+              <input type="color" id="colorPicker" value="#ff0000" />
+            </div>
+            <div class="control-row">
+              <label for="intensitySlider">Max Intensity:</label>
+              <input
+                type="range"
+                id="intensitySlider"
+                min="0.3"
+                max="1.0"
+                value="1.0"
+                step="0.1"
+              />
+              <span id="intensityValue">100%</span>
+            </div>
+            <div class="control-row">
+              <label for="sizeSlider">Circle Size:</label>
+              <input
+                type="range"
+                id="sizeSlider"
+                min="20"
+                max="80"
+                value="40"
+                step="5"
+              />
+              <span id="sizeValue">40px</span>
+            </div>
+          </div>
+
+          <div class="control-group">
+            <h3>Display Layout</h3>
+            <div class="control-row">
+              <label for="rowsSlider">Number of Rows:</label>
+              <input
+                type="range"
+                id="rowsSlider"
+                min="1"
+                max="7"
+                value="1"
+                step="1"
+              />
+              <span id="rowsValue">1</span>
+            </div>
+            <div class="control-row">
+              <label for="lightsPerRow">Lights per Row:</label>
+              <input
+                type="range"
+                id="lightsPerRow"
+                min="5"
+                max="12"
+                value="7"
+                step="1"
+              />
+              <span id="lightsPerRowValue">7</span>
+            </div>
+          </div>
+
+          <div class="control-group">
+            <h3>Presets</h3>
+            <div class="control-row">
+              <button class="preset-btn" data-preset="classic">
+                Classic Red
+              </button>
+              <button class="preset-btn" data-preset="rainbow">Rainbow</button>
+              <button class="preset-btn" data-preset="winter">
+                Winter Blue
+              </button>
+              <button class="preset-btn" data-preset="gold">Golden</button>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer>
+        <p>🎅 Happy Holidays! 🎅</p>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
